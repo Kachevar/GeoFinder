@@ -10,8 +10,8 @@ map = folium.Map(
 )
 map.add_child(folium.LatLngPopup())
 
-df_schools = pd.read_csv('Rus_schools_final.csv', encoding='windows-1251')
-schools = df_schools[df_schools['addr'].str.contains('г. Новокузнецк', na=False)]
+df = pd.read_csv('Rus_schools_final.csv', encoding='windows-1251')
+schools = df[df['addr'].str.contains('г. Новокузнецк', na=False)]
 
 school_cluster = MarkerCluster(name='Школы').add_to(map)
 
@@ -30,8 +30,8 @@ for _, row in schools.iterrows():
 
 folium.LayerControl().add_to(map)
 
-df_udo = pd.read_csv('UDO.csv', encoding='windows-1251')
-udo = df_udo[df_udo['addr'].str.contains('г. Новокузнецк', na=False)]
+df1 = pd.read_csv('UDO.csv', encoding='windows-1251')
+udo = df1[df1['addr'].str.contains('г. Новокузнецк', na=False)]
 
 udo_cluster = MarkerCluster(name='Учреждения доп. образования').add_to(map)
 
