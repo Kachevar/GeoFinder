@@ -11,7 +11,7 @@ map = folium.Map(
 map.add_child(folium.LatLngPopup())
 
 df_schools = pd.read_csv('Rus_schools_final.csv', encoding='windows-1251')
-df_udo = pd.read_csv('/mnt/data/УДО.csv', encoding='windows-1251')
+df_udo = pd.read_csv('UDO.csv', encoding='windows-1251')
 
 schools_nk = df_schools[df_schools['addr'].str.contains('г. Новокузнецк', na=False)]
 udo_nk = df_udo[df_udo['addr'].str.contains('г. Новокузнецк', na=False)]
