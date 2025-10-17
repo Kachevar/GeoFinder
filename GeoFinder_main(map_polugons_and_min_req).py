@@ -48,19 +48,19 @@ for _, row in df2.iterrows():
     folium.Polygon(
     locations=Distrcit_Coords.polygon1,
     popup="Полигон 1",
-    color="white",
+    color="",
     fill=True,
     fill_color="green",
-    fill_opacity=0.000005
+    fill_opacity=0.01
 ).add_to(map)
 
 folium.Polygon(
     locations=Distrcit_Coords.polygon2,
     popup="Полигон 2",
-    color="purple",
+    color="",
     fill=True,
-    fill_color="",
-    fill_opacity=0.1
+    fill_color="purple",
+    fill_opacity=0.3
 ).add_to(map)
 
 folium.LayerControl().add_to(map)
@@ -68,41 +68,34 @@ folium.LayerControl().add_to(map)
 folium.Polygon(
     locations=Distrcit_Coords.polygon3,
     popup="Полигон 3",
-    color="orange",
+    color="",
     fill=True,
-    fill_color="orange",
-    fill_opacity=0.1
-).add_to(map)
-folium.Polygon(
-    locations=Distrcit_Coords.polygon1,
-    popup="Полигон 1",
-    color="purple",
-    fill=True,
-    fill_color="blue",
-    fill_opacity=0.1
+    fill_color="red",
+    fill_opacity=0.3
 ).add_to(map)
 folium.Polygon(
     locations=Distrcit_Coords.polygon4,
     popup="Полигон 4",
-    color="red",
+    color="",
     fill=True,
-    fill_color="red",
-    fill_opacity=0.1
+    fill_color="orange",
+    fill_opacity=0.3
 ).add_to(map)
 folium.Polygon(
     locations=Distrcit_Coords.polygon5,
     popup="Полигон 5",
-    color="yellow",
+    color="",
     fill=True,
     fill_color="yellow",
-    fill_opacity=0.1
+    fill_opacity=0.2
 ).add_to(map)
 folium.Polygon(
     locations=Distrcit_Coords.polygon6,
     popup="Полигон 6",
-    color="brown",
+    color="",
     fill=True,
-    fill_color="",
-    fill_opacity=0.1
+    fill_color="darkblue",
+    fill_opacity=0.3
 ).add_to(map)
-map
+
+map.save('map.html')
