@@ -1,3 +1,4 @@
+# импортируем необходимые для работы программы модули
 import pandas as pd
 import folium
 from folium.plugins import MarkerCluster
@@ -47,7 +48,7 @@ for _, udo_row in udo.iterrows():
     nearby_schools = schools_temp[schools_temp['distance'] <= 3] # нахождение школ входящих в радиус 3км
     
     for _, school_row in nearby_schools.iterrows():
-        school_id = f"{school_row['lat']}_{school_row['lon']}"
+        school_id = f"{school_row['lat']}_{school_row['lon']}" # перебираем координаты всех школ
 
         # добавляем ближайшую школу в список школ в радиусе 3км от УДО если ее там нет
         if school_id not in added_nearby_schools:
@@ -60,7 +61,7 @@ for _, udo_row in udo.iterrows():
             ).add_to(schools_near_cluster) # создание Marker'ов школ, входящих в радиус 3км от УДО
 
 for _, school_row in schools.iterrows():
-    school_id = f"{school_row['lat']}_{school_row['lon']}"
+    school_id = f"{school_row['lat']}_{school_row['lon']}" # перебираем координаты всех школ
     
     #добавляем школу, находящуюся дальше 3км от УДО, в список школ, невходящих в радиус 3км от УДО, если ее там нету
     if school_id not in added_nearby_schools:
