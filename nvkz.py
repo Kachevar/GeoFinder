@@ -227,7 +227,7 @@ poligon4 = [
       [53.798801, 87.044010]
     ]
 
-        Ordzhonikidzevsky district
+        #Ordzhonikidzevsky district
 
 poligon5 = [
 
