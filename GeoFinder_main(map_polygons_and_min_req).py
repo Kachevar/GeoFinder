@@ -1,4 +1,3 @@
-# импортируем необходимые для работы программы модули
 import Distrcit_Coords
 import pandas as pd
 import folium
@@ -47,55 +46,61 @@ for _, row in df2.iterrows():
 
     folium.Polygon(
     locations=Distrcit_Coords.polygon1,
-    popup="Полигон 1",
+    popup="Новоильинский район: Плотность населения - 3450 человек на км²",
     color="",
     fill=True,
     fill_color="green",
-    fill_opacity=0.01
+    fill_opacity=0.01,
+    tooltip = "Нажмите для подробной информации"
 ).add_to(map)
 
 folium.Polygon(
     locations=Distrcit_Coords.polygon2,
-    popup="Полигон 2",
+    popup="Заводский район: Плотность населения - 848 человек на км²",
     color="",
     fill=True,
     fill_color="purple",
-    fill_opacity=0.3
+    fill_opacity=0.3,
+    tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
 folium.LayerControl().add_to(map)
 
 folium.Polygon(
     locations=Distrcit_Coords.polygon3,
-    popup="Полигон 3",
+    popup="Кузнецкий район: Плотность населения - 1299 человек на км²",
     color="",
     fill=True,
     fill_color="red",
-    fill_opacity=0.3
+    fill_opacity=0.3,
+    tooltip="Нажмите для подробной информации",
 ).add_to(map)
 folium.Polygon(
     locations=Distrcit_Coords.polygon4,
-    popup="Полигон 4",
+    popup="Центральный район: Плотность населения - 2504 человек на км²",
     color="",
     fill=True,
     fill_color="orange",
-    fill_opacity=0.3
+    fill_opacity=0.3,
+    tooltip="Нажмите для подробной информации"
 ).add_to(map)
 folium.Polygon(
     locations=Distrcit_Coords.polygon5,
-    popup="Полигон 5",
+    popup="Орджоникидзевский район: Плотность населения - 821 человек на км²",
     color="",
     fill=True,
     fill_color="yellow",
-    fill_opacity=0.2
+    fill_opacity=0.2,
+    tooltip="Нажмите для подробной информации"
 ).add_to(map)
 folium.Polygon(
     locations=Distrcit_Coords.polygon6,
-    popup="Полигон 6",
+    popup="Куйбышевский район: Плотность населения - 812 человек на км²",
     color="",
     fill=True,
     fill_color="darkblue",
-    fill_opacity=0.3
+    fill_opacity=0.3,
+    tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
 map.save('map.html')
