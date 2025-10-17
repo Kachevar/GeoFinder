@@ -60,4 +60,3 @@ folium.LayerControl().add_to(map)
 
 # === 9. Сохранение карты ===
 map.save('map_udo_schools.html')
-print("✅ Карта сохранена как map_udo_schools.html")
