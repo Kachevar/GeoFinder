@@ -74,42 +74,42 @@ for _, school_row in schools.iterrows():
 folium.Polygon(
     locations=District_Coords.polygon1,
     popup="Новоильинский район: Плотность населения - 3450 человек/км². Рейтинг доступности УДО: 4.4★",
-    fill=True, fill_color="green", fill_opacity=0.3,
+    fill=True, fill_color="green", fill_opacity=0.3,color ='',
     tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
 folium.Polygon(
     locations=District_Coords.polygon2,
     popup="Заводский район: Плотность населения - 848 человек/км². Рейтинг доступности УДО: 3.8★",
-    fill=True, fill_color="purple", fill_opacity=0.3,
+    fill=True, fill_color="purple", fill_opacity=0.3,color ='',
     tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
 folium.Polygon(
     locations=District_Coords.polygon3,
     popup="Кузнецкий район: Плотность населения - 1299 человек/км². Рейтинг доступности УДО: 3.5★",
-    fill=True, fill_color="red", fill_opacity=0.3,
+    fill=True, fill_color="red", fill_opacity=0.3, color ='',
     tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
 folium.Polygon(
     locations=District_Coords.polygon4,
     popup="Центральный район: Плотность населения - 2504 человек/км². Рейтинг доступности УДО: 4.9★",
-    fill=True, fill_color="orange", fill_opacity=0.3,
+    fill=True, fill_color="orange", fill_opacity=0.3,color ='',
     tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
 folium.Polygon(
     locations=District_Coords.polygon5,
     popup="Орджоникидзевский район: Плотность населения - 821 человек/км². Рейтинг доступности УДО: 3.0★",
-    fill=True, fill_color="yellow", fill_opacity=0.3,
+    fill=True, fill_color="yellow", fill_opacity=0.3,color ='',
     tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
 folium.Polygon(
     locations=District_Coords.polygon6,
     popup="Куйбышевский район: Плотность населения - 812 человек/км². Рейтинг доступности УДО: 4.1★",
-    fill=True, fill_color="darkblue", fill_opacity=0.3,
+    fill=True, fill_color="darkblue", fill_opacity=0.3,color ='',
     tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
@@ -121,7 +121,7 @@ legend_html = """
 
 <div style="
     position: fixed; 
-    bottom: 30px; left: 30px; width: 250px; 
+    bottom: -1px; left: 664px; width: 250px; 
     background-color: white;
     border: 2px solid #666;
     border-radius: 10px;
@@ -155,22 +155,3 @@ map.get_root().add_child(legend)
 
 # Сохранение карты
 map.save('map.html')
-
-# Статистика в консоль
-print("СТАТИСТИКА ШКОЛ:")
-print("=" * 50)
-print(f"Всего школ в Новокузнецке: {len(schools)}")
-print(f"Школ в радиусе 3 км от УДО: {len(added_nearby_schools)}")
-print(f"Школ вне радиуса 3 км от УДО: {len(far_schools)}")
-print("=" * 50)
-print("\nШколы в радиусе 3 км от УДО (зеленые):")
-for school_id in added_nearby_schools:
-    lat, lon = school_id.split('_')
-    school_info = schools[(schools['lat'] == float(lat)) & (schools['lon'] == float(lon))].iloc[0]
-    print(f"  - {school_info['name']}")
-
-print("\nШколы вне радиуса 3 км от УДО (красные):")
-for school_id in far_schools:
-    lat, lon = school_id.split('_')
-    school_info = schools[(schools['lat'] == float(lat)) & (schools['lon'] == float(lon))].iloc[0]
-    print(f"  - {school_info['name']}")
