@@ -4,5 +4,6 @@
 Удобно для семей — полезно для города.
 
 Открой все возможности дополнительного образования в один клик!
-![Uploading image.png…]()
 
+
+<img width="1404" height="899" alt="фото1" src="https://github.com/user-attachments/assets/4c4f8dc9-ceb0-427e-90ab-3076e4eab243" />
