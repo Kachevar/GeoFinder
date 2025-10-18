@@ -16,9 +16,9 @@ map = folium.Map(
 map.add_child(folium.LatLngPopup())
 
 # принимаем нужные нам .csv файлы как дата-фреймы для дальнейшей работы с ними
-schools_data = pd.read_csv('Rus_schools_final.csv', encoding='windows-1251')
+df1 = pd.read_csv('Rus_schools_final.csv', encoding='windows-1251')
 udo = pd.read_csv('UDO.csv', encoding="utf-8", sep=';')
-schools = schools_data[schools_data['addr'].str.contains('г. Новокузнецк', na=False)] # ищем школы только в городе Новокузнецк
+schools = df1[df1['addr'].str.contains('г. Новокузнецк', na=False)] # ищем школы только в городе Новокузнецк
 
 # генерируем маркер-кластеры для каждой группы объектов (учреждения доп. образования, школы подходящие по условию и школы неподходящие по условию)
 udo_cluster = MarkerCluster(name="Учреждения доп. образования").add_to(map)
