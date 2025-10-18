@@ -6,7 +6,7 @@
 Открой все возможности дополнительного образования в один клик!
 
 
-<img width="1404" height="899" alt="фото1" src="https://github.com/user-attachments/assets/4c4f8dc9-ceb0-427e-90ab-3076e4eab243" />
+<img width="1393" height="901" alt="фото2" src="https://github.com/user-attachments/assets/764d0ea9-131e-4c0c-a732-ec650cd52125" />
 
 # Какие библиотеки использует программа?
 Программа использует Pandas, folium и  geopy.
