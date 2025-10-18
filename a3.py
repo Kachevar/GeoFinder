@@ -75,7 +75,7 @@ for _, school_row in schools.iterrows():
         ).add_to(schools_far_cluster) # создание Marker'ов школ, не входящих в радиус 3км от УДО
 
 folium.Polygon(
-    locations=Distrcit_Coords.polygon1,
+    locations=District_Coords.polygon1,
     popup="Новоильинский район: Плотность населения - 3450 человек на км².\tРейтинг доступности УДО: 4.4/5★",
     color="",
     fill=True,
@@ -85,7 +85,7 @@ folium.Polygon(
 ).add_to(map)
 
 folium.Polygon(
-    locations=Distrcit_Coords.polygon2,
+    locations=District_Coords.polygon2,
     popup="Заводский район: Плотность населения - 848 человек на км².\tРейтинг доступности УДО: 3.8/5★",
     color="",
     fill=True,
@@ -97,7 +97,7 @@ folium.Polygon(
 folium.LayerControl().add_to(map)
 
 folium.Polygon(
-    locations=Distrcit_Coords.polygon3,
+    locations=District_Coords.polygon3,
     popup="Кузнецкий район: Плотность населения - 1299 человек на км².\tРейтинг доступности УДО: 3.5/5★",
     color="",
     fill=True,
@@ -107,7 +107,7 @@ folium.Polygon(
 ).add_to(map)
 
 folium.Polygon(
-    locations=Distrcit_Coords.polygon4,
+    locations=District_Coords.polygon4,
     popup="Центральный район: Плотность населения - 2504 человек на км².\tРейтинг доступности УДО: 4.9/5★",
     color="",
     fill=True,
@@ -117,7 +117,7 @@ folium.Polygon(
 ).add_to(map)
 
 folium.Polygon(
-    locations=Distrcit_Coords.polygon5,
+    locations=District_Coords.polygon5,
     popup="Орджоникидзевский район: Плотность населения - 821 человек на км².\tРейтинг доступности УДО: 3.0/5★",
     color="",
     fill=True,
@@ -127,7 +127,7 @@ folium.Polygon(
 ).add_to(map)
 
 folium.Polygon(
-    locations=Distrcit_Coords.polygon6,
+    locations=District_Coords.polygon6,
     popup="Куйбышевский район: Плотность населения - 812 человек на км².\tРейтинг доступности УДО: 4.1/5★",
     color="",
     fill=True,
