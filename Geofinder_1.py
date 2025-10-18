@@ -1,5 +1,5 @@
 # импортируем необходимые для работы программы модули
-import District_Coords
+import Distrcit_Coords
 import pandas as pd
 import folium
 from folium.plugins import MarkerCluster
