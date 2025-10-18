@@ -96,8 +96,6 @@ folium.Polygon(
     tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
-folium.LayerControl().add_to(map)
-
 folium.Polygon(
     locations=District_Coords.polygon3,
     popup="Кузнецкий район: Плотность населения - 1299 человек на км².\tРейтинг доступности УДО: 3.5/5★",
