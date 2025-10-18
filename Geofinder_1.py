@@ -44,9 +44,19 @@ for _, row in df2.iterrows():
         icon=folium.Icon(color="blue", icon="graduation-cap", prefix='fa')
     ).add_to(school_cluster)
 
-    folium.Polygon(
+folium.Polygon(
+    locations=Distrcit_Coords.polygon4,
+    popup="Центральный район: Плотность населения - 2504 человек на км².\tРейтинг уровня доступности УДО: 4.9/5★",
+    color="",
+    fill=True,
+    fill_color="orange",
+    fill_opacity=0.3,
+    tooltip="Нажмите для подробной информации"
+).add_to(map)
+
+folium.Polygon(
     locations=Distrcit_Coords.polygon1,
-    popup="Новоильинский район: Плотность населения - 3450 человек на км²",
+    popup="Новоильинский район: Плотность населения - 3450 человек на км².\tРейтинг уровня доступности УДО: 4.4/5★",
     color="",
     fill=True,
     fill_color="green",
@@ -55,8 +65,18 @@ for _, row in df2.iterrows():
 ).add_to(map)
 
 folium.Polygon(
+    locations=Distrcit_Coords.polygon6,
+    popup="Куйбышевский район: Плотность населения - 812 человек на км².\tРейтинг уровня доступности УДО: 4.1/5★",
+    color="",
+    fill=True,
+    fill_color="darkblue",
+    fill_opacity=0.3,
+    tooltip="Нажмите для подробной информации"
+).add_to(map)
+
+folium.Polygon(
     locations=Distrcit_Coords.polygon2,
-    popup="Заводский район: Плотность населения - 848 человек на км²",
+    popup="Заводский район: Плотность населения - 848 человек на км².\tРейтинг уровня доступности УДО: 3.8/5★",
     color="",
     fill=True,
     fill_color="purple",
@@ -68,38 +88,21 @@ folium.LayerControl().add_to(map)
 
 folium.Polygon(
     locations=Distrcit_Coords.polygon3,
-    popup="Кузнецкий район: Плотность населения - 1299 человек на км²",
+    popup="Кузнецкий район: Плотность населения - 1299 человек на км².\tРейтинг уровня доступности УДО: 3.5/5★",
     color="",
     fill=True,
     fill_color="red",
     fill_opacity=0.3,
     tooltip="Нажмите для подробной информации",
 ).add_to(map)
-folium.Polygon(
-    locations=Distrcit_Coords.polygon4,
-    popup="Центральный район: Плотность населения - 2504 человек на км²",
-    color="",
-    fill=True,
-    fill_color="orange",
-    fill_opacity=0.3,
-    tooltip="Нажмите для подробной информации"
-).add_to(map)
+
 folium.Polygon(
     locations=Distrcit_Coords.polygon5,
-    popup="Орджоникидзевский район: Плотность населения - 821 человек на км²",
+    popup="Орджоникидзевский район: Плотность населения - 821 человек на км².\tРейтинг уровня доступности УДО: 3.0/5★",
     color="",
     fill=True,
     fill_color="yellow",
     fill_opacity=0.2,
-    tooltip="Нажмите для подробной информации"
-).add_to(map)
-folium.Polygon(
-    locations=Distrcit_Coords.polygon6,
-    popup="Куйбышевский район: Плотность населения - 812 человек на км²",
-    color="",
-    fill=True,
-    fill_color="darkblue",
-    fill_opacity=0.3,
     tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
