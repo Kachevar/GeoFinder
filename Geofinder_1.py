@@ -60,7 +60,7 @@ folium.Polygon(
     color="",
     fill=True,
     fill_color="green",
-    fill_opacity=0.01,
+    fill_opacity=0.3,
     tooltip = "Нажмите для подробной информации"
 ).add_to(map)
 
@@ -102,7 +102,7 @@ folium.Polygon(
     color="",
     fill=True,
     fill_color="yellow",
-    fill_opacity=0.2,
+    fill_opacity=0.3,
     tooltip="Нажмите для подробной информации"
 ).add_to(map)
 
